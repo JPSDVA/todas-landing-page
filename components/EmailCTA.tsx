@@ -39,7 +39,7 @@ export default function EmailCTA() {
             {t.cta.instagram}
           </a>
           <a
-            href="https://tiktok.com"
+            href="https://tiktok.com/@todas.club"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 border-2 border-[#0D0D0D] text-[#0D0D0D] font-bold text-sm rounded-full hover:bg-[#0D0D0D] hover:text-white transition-all"

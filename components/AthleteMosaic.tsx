@@ -3,16 +3,22 @@
 import Image from 'next/image';
 import { useLanguage } from '@/lib/LanguageContext';
 
+// Layout: 4 cols × 3 rows (dense). 2 tall (span-2) items fill the grid perfectly.
+// Visual result:
+// [01] [02] [03↕] [04]
+// [05] [06] [03↕] [09↕]
+// [07] [08] [10]  [09↕]
 const IMAGES = [
-  { src: '/images/athlete-01.jpg', span: 2 },
+  { src: '/images/athlete-01.jpg', span: 1 },
   { src: '/images/athlete-02.jpg', span: 1 },
-  { src: '/images/athlete-03.jpg', span: 1 },
+  { src: '/images/athlete-03.jpg', span: 2 },
   { src: '/images/athlete-04.jpg', span: 1 },
-  { src: '/images/athlete-05.jpg', span: 2 },
+  { src: '/images/athlete-05.jpg', span: 1 },
   { src: '/images/athlete-06.jpg', span: 1 },
+  { src: '/images/athlete-09.jpg', span: 2 },
   { src: '/images/athlete-07.jpg', span: 1 },
-  { src: '/images/athlete-08.jpg', span: 2 },
-  { src: '/images/athlete-09.jpg', span: 1 },
+  { src: '/images/athlete-08.jpg', span: 1 },
+  { src: '/images/athlete-10.jpg', span: 1 },
 ];
 
 export default function AthleteMosaic() {
@@ -30,6 +36,7 @@ export default function AthleteMosaic() {
           style={{
             gridTemplateColumns: 'repeat(4, 1fr)',
             gridAutoRows: '220px',
+            gridAutoFlow: 'row dense',
           }}
         >
           {IMAGES.map((img, i) => (

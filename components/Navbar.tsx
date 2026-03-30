@@ -60,7 +60,7 @@ export default function Navbar() {
 
         {/* TikTok */}
         <a
-          href="https://tiktok.com"
+          href="https://tiktok.com/@todas.club"
           target="_blank"
           rel="noopener noreferrer"
           aria-label={t.nav.tiktok}
