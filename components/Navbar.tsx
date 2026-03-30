@@ -45,7 +45,7 @@ export default function Navbar() {
 
         {/* Instagram */}
         <a
-          href="https://instagram.com"
+          href="https://instagram.com/todas.club"
           target="_blank"
           rel="noopener noreferrer"
           aria-label={t.nav.instagram}

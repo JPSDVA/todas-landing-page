@@ -26,7 +26,7 @@ export default function EmailCTA() {
         {/* Social buttons */}
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/todas.club"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 border-2 border-[#0D0D0D] text-[#0D0D0D] font-bold text-sm rounded-full hover:bg-[#0D0D0D] hover:text-white transition-all"
