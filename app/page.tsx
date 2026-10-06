@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import StatStrip from '@/components/StatStrip';
 import Manifesto from '@/components/Manifesto';
 import AthleteMosaic from '@/components/AthleteMosaic';
+import Shop from '@/components/Shop';
 import EmailCTA from '@/components/EmailCTA';
 import Footer from '@/components/Footer';
 
@@ -14,6 +15,7 @@ export default function Home() {
       <StatStrip />
       <Manifesto />
       <AthleteMosaic />
+      <Shop />
       <EmailCTA />
       <Footer />
     </main>

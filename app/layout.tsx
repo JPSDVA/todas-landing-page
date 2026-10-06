@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/lib/LanguageContext';
+import { CartProvider } from '@/lib/CartContext';
+import CartDrawer from '@/components/CartDrawer';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -29,7 +31,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="antialiased">
         <LanguageProvider>
-          {children}
+          <CartProvider>
+            {children}
+            <CartDrawer />
+          </CartProvider>
         </LanguageProvider>
       </body>
     </html>

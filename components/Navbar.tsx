@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { useLanguage } from '@/lib/LanguageContext';
+import { useCart } from '@/lib/CartContext';
 
 export default function Navbar() {
   const { lang, setLang, t } = useLanguage();
+  const { cart, open, setOpen } = useCart();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -42,6 +44,25 @@ export default function Navbar() {
             ES
           </button>
         </div>
+
+        {/* Cart */}
+        {cart && cart.totalQuantity > 0 || open ? (
+          <button
+            onClick={() => setOpen(true)}
+            aria-label={t.shop.cart}
+            className="relative text-white/80 hover:text-white transition-colors"
+          >
+            <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24">
+              <path d="M6 7h12l-1 13H7L6 7z" />
+              <path d="M9 7a3 3 0 016 0" />
+            </svg>
+            {cart && cart.totalQuantity > 0 && (
+              <span className="absolute -top-2 -right-2.5 bg-[#E5FF00] text-black text-[11px] font-bold rounded-full min-w-[18px] h-[18px] grid place-items-center px-1">
+                {cart.totalQuantity}
+              </span>
+            )}
+          </button>
+        ) : null}
 
         {/* Instagram */}
         <a
