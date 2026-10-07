@@ -42,6 +42,10 @@ const content = {
     shop: {
       eyebrow: 'Shop',
       headline: 'New from Todas',
+      back: '← Back to shop',
+      size: 'Size',
+      description: 'Description',
+      madeToOrder: 'Printed on demand',
       add: 'Add to cart',
       soldOut: 'Sold out',
       cart: 'Your cart',
@@ -98,6 +102,10 @@ const content = {
     shop: {
       eyebrow: 'Tienda',
       headline: 'Lo nuevo de Todas',
+      back: '← Volver a la tienda',
+      size: 'Talla',
+      description: 'Descripción',
+      madeToOrder: 'Impreso bajo pedido',
       add: 'Agregar al carrito',
       soldOut: 'Agotado',
       cart: 'Tu carrito',

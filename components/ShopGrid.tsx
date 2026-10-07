@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useLanguage } from '@/lib/LanguageContext';
 import { useCart } from '@/lib/CartContext';
 import { Product, formatPrice } from '@/lib/shopify';
@@ -17,7 +18,11 @@ function ProductCard({ product }: { product: Product }) {
 
   return (
     <div className="bg-white rounded-2xl overflow-hidden flex flex-col transition-transform hover:-translate-y-1">
-      <div className="relative aspect-[4/5] bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#3a0060]">
+      <Link
+        href={`/producto/${product.handle}`}
+        aria-label={product.title}
+        className="relative block aspect-[4/5] bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#3a0060]"
+      >
         {product.image && (
           <Image
             src={product.image.url}
@@ -27,10 +32,12 @@ function ProductCard({ product }: { product: Product }) {
             className="object-cover"
           />
         )}
-      </div>
+      </Link>
       <div className="p-5 flex flex-col gap-3 flex-1">
         <h3 className="text-lg font-bold" style={{ fontFamily: 'var(--font-space-grotesk, sans-serif)' }}>
-          {product.title}
+          <Link href={`/producto/${product.handle}`} className="hover:underline">
+            {product.title}
+          </Link>
         </h3>
         <p className="text-[#0D0D0D]/60">{formatPrice(selected?.price ?? product.price, product.currency)}</p>
 
